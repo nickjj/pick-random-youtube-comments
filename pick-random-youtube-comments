@@ -40,7 +40,7 @@ def youtube_video_id(str):
     if len(str) == 11:
         return str
     else:
-        msg = 'not a valid YouTube video id: "{0}"'.format(str)
+        msg = f'not a valid YouTube video id: "{str}"'
         raise argparse.ArgumentTypeError(msg)
 
 
@@ -50,7 +50,7 @@ def positive_int(val):
     if int_val >= 0:
         return int_val
     else:
-        msg = 'must be a positive integer: "{0}"'.format(val)
+        msg = f'must be a positive integer: "{val}"'
         raise argparse.ArgumentTypeError(msg)
 
 
