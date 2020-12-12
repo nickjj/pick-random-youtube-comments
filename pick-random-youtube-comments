@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
     duplicate_authors_count = authors_count - authors_unique_count
 
-    winners, winner_count = pick_winners(authors, authors_unique_count,
+    winners, winner_count = pick_winners(authors, authors_final_count,
                                          args.winners)
 
     print(f'\n{authors_count} top level comments were returned')
