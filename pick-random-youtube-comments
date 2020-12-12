@@ -124,10 +124,10 @@ def remove_authors(items, skip_items):
     return items
 
 
-def pick_winners(authors, authors_len, winner_count):
+def pick_winners(authors, authors_count, winner_count):
     # We can't pick more winners than we have in total.
-    if winner_count > authors_len:
-        winner_count = authors_len
+    if winner_count > authors_count:
+        winner_count = authors_count
 
     return (random.sample(authors, winner_count), winner_count)
 
