@@ -44,6 +44,16 @@ def youtube_video_id(str):
         raise argparse.ArgumentTypeError(msg)
 
 
+def positive_int(val):
+    int_val = int(val)
+
+    if int_val >= 0:
+        return int_val
+    else:
+        msg = 'must be a positive integer: "{0}"'.format(val)
+        raise argparse.ArgumentTypeError(msg)
+
+
 def display_names(results, is_verbose):
     authors = []
 
@@ -144,7 +154,7 @@ def parseargs():
                         metavar='VIDEO_ID', type=youtube_video_id,
                         help='the 11 characters after ?v= in a YouTube URL')
 
-    parser.add_argument('--winners', default=10, type=int,
+    parser.add_argument('--winners', default=10, type=positive_int,
                         metavar='WINNERS',
                         help='number of winners to pick (defaults to 10)')
 
