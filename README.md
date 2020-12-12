@@ -25,7 +25,7 @@ your system path and run it:
 
 ```sh
 sudo curl \
-  -L https://raw.githubusercontent.com/nickjj/pick-random-youtube-comments/0.1.0/pick-random-youtube-comments \
+  -L https://raw.githubusercontent.com/nickjj/pick-random-youtube-comments/0.2.0/pick-random-youtube-comments \
   -o /usr/local/bin/pick-random-youtube-comments && sudo chmod +x /usr/local/bin/pick-random-youtube-comments
 ```
 
