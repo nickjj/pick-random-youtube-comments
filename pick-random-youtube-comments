@@ -25,13 +25,6 @@ def get_api_key():
         sys.exit(1)
 
 
-def validate_omit_authors(omit_authors):
-    try:
-        return list(map(str.strip, omit_authors.split(',')))
-    except IndexError:
-        return []
-
-
 def youtube_video_id(str):
     str = str.strip()
 
@@ -52,6 +45,13 @@ def positive_int(val):
     else:
         msg = f'must be a positive integer: "{val}"'
         raise argparse.ArgumentTypeError(msg)
+
+
+def check_omit_authors(omit_authors):
+    if omit_authors == '':
+        return []
+
+    return list(map(str.strip, omit_authors.split(',')))
 
 
 def display_names(results, is_verbose):
@@ -158,7 +158,7 @@ def parseargs():
                         metavar='WINNERS',
                         help='number of winners to pick (defaults to 10)')
 
-    parser.add_argument('--omit-authors', default='', type=str,
+    parser.add_argument('--omit-authors', default='', type=check_omit_authors,
                         metavar='OMIT_AUTHORS',
                         help='comma separated list of author names to omit')
 
@@ -172,8 +172,7 @@ def parseargs():
 if __name__ == '__main__':
     args = parseargs()
 
-    omit_authors = validate_omit_authors(args.omit_authors)
-    omit_authors_count = len(omit_authors)
+    omit_authors_count = len(args.omit_authors)
 
     authors = get_comment_authors(get_api_key(), args.video_id, args.verbose)
     authors = flatten_list(authors)
@@ -182,7 +181,7 @@ if __name__ == '__main__':
     authors = sorted_unique_list(authors)
     authors_unique_count = len(authors)
 
-    authors = remove_authors(authors, omit_authors)
+    authors = remove_authors(authors, args.omit_authors)
     authors_final_count = len(authors)
 
     duplicate_authors_count = authors_count - authors_unique_count
