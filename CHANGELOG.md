@@ -9,6 +9,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Nothing yet!
 
+## [0.2.1] - 2020-12-12
+
+## Fixed
+
+- Report the correct number of omit authors
+
 ## [0.2.0] - 2020-12-12
 
 ## Fixed
@@ -22,6 +28,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/nickjj/pick-random-youtube-comments/compare/0.2.0...HEAD
+[Unreleased]: https://github.com/nickjj/pick-random-youtube-comments/compare/0.2.1...HEAD
+[0.2.1]: https://github.com/nickjj/pick-random-youtube-comments/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/nickjj/pick-random-youtube-comments/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/nickjj/pick-random-youtube-comments/releases/tag/0.1.0
