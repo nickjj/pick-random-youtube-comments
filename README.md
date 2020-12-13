@@ -65,17 +65,16 @@ Getting comments for page 1...
 = 82 comment authors have a chance to win
 
 Winners (10):
-
-Louis Tabosa
-Dave Dyer
-ouais ok
-Saad Eddin
-Vishal Hosamani
-Joey van der wal
-Ryan Markoff
-Mukul Rawat
-Brandon McAllister
-northshorepx
+  Louis Tabosa
+  Dave Dyer
+  ouais ok
+  Saad Eddin
+  Vishal Hosamani
+  Joey van der wal
+  Ryan Markoff
+  Mukul Rawat
+  Brandon McAllister
+  northshorepx
 ```
 
 Comments are only counted once, meaning if the same person comments 10 times
