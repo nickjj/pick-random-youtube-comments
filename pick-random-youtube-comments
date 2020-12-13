@@ -25,7 +25,7 @@ def get_api_key():
         sys.exit(1)
 
 
-def youtube_video_id(str):
+def check_youtube_video_id(str):
     str = str.strip()
 
     # This is a bit naive but it should be good enough to protect against
@@ -37,7 +37,7 @@ def youtube_video_id(str):
         raise argparse.ArgumentTypeError(msg)
 
 
-def positive_int(val):
+def check_positive_int(val):
     int_val = int(val)
 
     if int_val >= 0:
@@ -151,10 +151,10 @@ def parseargs():
         '''))
 
     parser.add_argument('video_id', default=None,
-                        metavar='VIDEO_ID', type=youtube_video_id,
+                        metavar='VIDEO_ID', type=check_youtube_video_id,
                         help='the 11 characters after ?v= in a YouTube URL')
 
-    parser.add_argument('--winners', default=10, type=positive_int,
+    parser.add_argument('--winners', default=10, type=check_positive_int,
                         metavar='WINNERS',
                         help='number of winners to pick (defaults to 10)')
 
