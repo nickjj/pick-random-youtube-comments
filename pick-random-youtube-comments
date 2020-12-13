@@ -189,10 +189,13 @@ if __name__ == '__main__':
     winners, winner_count = pick_winners(authors, authors_final_count,
                                          args.winners)
 
-    print(f'\n{authors_count} top level comments were returned')
-    print(f'- {duplicate_authors_count} comment(s) had duplicate authors')
-    print(f'- {omit_authors_count} comment authors were explicitly omit')
-    print(f'= {authors_final_count} comment authors have a chance to win')
+    winners = '\n  '.join(winners)
+    output = f'''{authors_count} top level comments were returned
+- {duplicate_authors_count} comment(s) had duplicate authors
+- {omit_authors_count} comment authors were explicitly omit
+= {authors_final_count} comment authors have a chance to winner_count
 
-    print(f'\nWinners ({winner_count}):\n')
-    print('\n'.join(winners))
+Winners ({winner_count}):
+  {winners}'''
+
+    print(output)
