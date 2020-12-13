@@ -169,6 +169,23 @@ def parseargs():
     return parser.parse_args()
 
 
+def generate_report(winners, winner_count, authors_count,
+                    duplicate_authors_count, omit_authors_count,
+                    authors_final_count):
+    winners = '\n  '.join(winners)
+
+    print(f'''
+{authors_count} top level comments were returned
+- {duplicate_authors_count} comment(s) had duplicate authors
+- {omit_authors_count} comment authors were explicitly omit
+= {authors_final_count} comment authors have a chance to win
+
+Winners ({winner_count}):
+  {winners}''')
+
+    return None
+
+
 if __name__ == '__main__':
     args = parseargs()
 
@@ -189,13 +206,9 @@ if __name__ == '__main__':
     winners, winner_count = pick_winners(authors, authors_final_count,
                                          args.winners)
 
-    winners = '\n  '.join(winners)
-    output = f'''{authors_count} top level comments were returned
-- {duplicate_authors_count} comment(s) had duplicate authors
-- {omit_authors_count} comment authors were explicitly omit
-= {authors_final_count} comment authors have a chance to winner_count
-
-Winners ({winner_count}):
-  {winners}'''
-
-    print(output)
+    generate_report(winners=winners,
+                    winner_count=winner_count,
+                    authors_count=authors_count,
+                    duplicate_authors_count=duplicate_authors_count,
+                    omit_authors_count=omit_authors_count,
+                    authors_final_count=authors_final_count)
