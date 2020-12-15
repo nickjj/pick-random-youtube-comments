@@ -11,19 +11,19 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.2.2] - 2020-12-13
 
-## Changed
+### Changed
 
 - Winners have 2 spaces before their name in the report to make it easier to parse
 
 ## [0.2.1] - 2020-12-12
 
-## Fixed
+### Fixed
 
 - Report the correct number of omit authors
 
 ## [0.2.0] - 2020-12-12
 
-## Fixed
+### Fixed
 
 - An exception if `--winners` is < 0 or a non-integer
 - An exception if `--winners` count exceeds the total authors' list length
