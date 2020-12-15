@@ -11,12 +11,28 @@ winners based on who commented.
 
 ## Table of contents
 
+- [Demo video and walking through the Python code](#demo-video-and-walking-through-the-python-code)
 - [Installation](#installation)
 - [Usage](#usage)
 - [FAQ](#faq)
   - [What about API rate limits?](#what-about-api-rate-limits)
   - [This tool's comment count doesn't match YouTube's count](#this-tools-comment-count-doesnt-match-youtubes-count)
 - [About the Author](#about-the-author)
+
+## Demo video and walking through the Python code
+
+This video goes over how to install and use this CLI tool but it also walks
+through all of the code to make it work.
+
+We'll cover a bunch of general Python programming concepts like using argparse,
+CLI argument validation, using `map()`, making GET requests, env variables,
+loading JSON, picking random items from a list, de-duping a list and more.
+
+[![Demo
+video](https://img.youtube.com/vi/QzxmWzHtimA/0.jpg)](https://www.youtube.com/watch?v=QzxmWzHtimA)
+
+If you prefer reading instead of video this README file covers installing and
+using this tool too.
 
 ## Installation
 
